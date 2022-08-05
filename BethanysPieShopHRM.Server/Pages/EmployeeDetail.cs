@@ -1,7 +1,7 @@
 ﻿using BethanysPieShopHRM.Shared;
 using Microsoft.AspNetCore.Components;
 
-namespace BethanysPieShop.Pages
+namespace BethanysPieShopHRM.Server.Pages
 {
     public partial class EmployeeDetail
     {

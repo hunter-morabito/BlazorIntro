@@ -1,6 +1,6 @@
 ﻿using BethanysPieShopHRM.Shared;
 
-namespace BethanysPieShop.Pages
+namespace BethanysPieShopHRM.Server.Pages
 {
     public partial class EmployeeOverview
     {
