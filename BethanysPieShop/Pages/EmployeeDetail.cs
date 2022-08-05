@@ -1,15 +1,22 @@
 ﻿using BethanysPieShopHRM.Shared;
+using Microsoft.AspNetCore.Components;
 
 namespace BethanysPieShop.Pages
 {
     public partial class EmployeeDetail
     {
-		protected override Task OnInitializedAsync()
+        [Parameter]
+        public string EmployeeId { get; set; }
+
+        public Employee Employee { get; set; }
+
+        protected override Task OnInitializedAsync()
 		{
 
 			InitializeCountries();
 			InitializeJobCategories();
 			InitializeEmployees();
+			Employee = Employees.FirstOrDefault(e => e.EmployeeId == int.Parse(EmployeeId));
 
 			return base.OnInitializedAsync();
 		}
