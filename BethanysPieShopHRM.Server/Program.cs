@@ -8,5 +8,7 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddHttpClient<IEmployeeDataService, EmployeeDataService>(client => client.BaseAddress = new Uri("https://localhost:44340/"));
+builder.Services.AddHttpClient<ICountryDataService, CountryDataService>(client => client.BaseAddress = new Uri("https://localhost:44340/"));
+builder.Services.AddHttpClient<IJobCategoryDataSerivce, JobCategoryDataService>(client => client.BaseAddress = new Uri("https://localhost:44340/"));
 
 await builder.Build().RunAsync();
