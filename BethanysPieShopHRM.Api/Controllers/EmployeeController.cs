@@ -35,11 +35,11 @@ namespace BethanysPieShopHRM.Api.Controllers
 
             if (employee.FirstName == string.Empty || employee.LastName == string.Empty)
             {
-                ModelState.AddModelError("Name/FirstName", "The name or first name shouldn't be empty");
+                //ModelState.AddModelError("Name/FirstName", "The name or first name shouldn't be empty");
             }
 
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            //if (!ModelState.IsValid)
+              //  return BadRequest(ModelState);
 
             var createdEmployee = _employeeRepository.AddEmployee(employee);
 
